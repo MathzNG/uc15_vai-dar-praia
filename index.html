@@ -1,144 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formatura TI116 — Vai Dar Praia</title>
-</head>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-
-        <h1>Fomatura TI116 - Vai Dar Praia</h1>
-        <p>É uma confraternização de formatura da turma TI116 - Técnico em Informática</p>
-
+      <h1>Fomatura TI116 - Vai Dar Praia</h1>
+      <p>
+        É uma confraternização de formatura da turma TI116 - Técnico em
+        Informática
+      </p>
     </header>
 
     <main>
+      <section>
+        <h2>Formatura TI116</h2>
+        <p>
+          O evento será realizado pela turma de Técnico em Informática 116, será
+          realizado uma confraternização como uma comemoração da formatura.
+        </p>
+      </section>
 
-        <section>
-            <h2>Formatura TI116</h2>
-            <p>O evento será realizado pela turma de Técnico em Informática 116, será realizado uma confraternização
-                como uma comemoração da formatura.</p>
-        </section>
+      <section>
+        <h2>Quando e onde</h2>
 
-        <section>
+        <dl>
+          <dt>Data</dt>
+          <dd>
+            <time datetime="2026-12-12">Sábado, 12 de dezembro de 2026</time>
+          </dd>
+          <dt>Saída</dt>
+          <dd>6h30, em frente ao Senac Largo Treze</dd>
+          <dt>Volta</dt>
+          <dd>20h, no mesmo lugar</dd>
+          <dt>Confirmação até</dt>
+          <dd><time datetime="2026-11-28">28 de novembro</time></dd>
+        </dl>
+      </section>
 
-            <h2>Quando e onde</h2>
+      <section>
+        <h2>Programação do dia</h2>
 
-            <dl>
-                <dt>Data</dt>
-                <dd><time datetime="2026-12-12">Sábado, 12 de dezembro de 2026</time></dd>
-                <dt>Saída</dt>
-                <dd>6h30, em frente ao Senac Largo Treze</dd>
-                <dt>Volta</dt>
-                <dd>20h, no mesmo lugar</dd>
-                <dt>Confirmação até</dt>
-                <dd><time datetime="2026-11-28">28 de novembro</time></dd>
-            </dl>
+        <table>
+          <thead>
+            <tr>
+              <th>Horário</th>
+              <th>O que acontece</th>
+              <th>Onde</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>06h30</td>
+              <td>Embarque</td>
+              <td>Senac Largo Treze</td>
+            </tr>
+            <tr>
+              <td>09h00</td>
+              <td>Chegada e montagem</td>
+              <td>Quiosque 14</td>
+            </tr>
+            <tr>
+              <td>12h00</td>
+              <td>Almoço coletivo</td>
+              <td>Quiosque 14</td>
+            </tr>
+            <tr>
+              <td>15h00</td>
+              <td>Foto oficial da turma</td>
+              <td>Faixa de areia</td>
+            </tr>
+            <tr>
+              <td>17h00</td>
+              <td>Desmontagem</td>
+              <td>Quiosque 14</td>
+            </tr>
+            <tr>
+              <td>18h00</td>
+              <td>Embarque de volta</td>
+              <td>Estacionamento do quiosque</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-        </section>
+      <section>
+        <h2>Como chegar</h2>
 
-        <section>
-            <h2>Programação do dia</h2>
+        <!-- MAPA?????????? -->
+      </section>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>O que acontece</th>
-                        <th>Onde</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>06h30</td>
-                        <td>Embarque</td>
-                        <td>Senac Largo Treze</td>
-                    </tr>
-                    <tr>
-                        <td>09h00</td>
-                        <td>Chegada e montagem</td>
-                        <td>Quiosque 14</td>
-                    </tr>
-                    <tr>
-                        <td>12h00</td>
-                        <td>Almoço coletivo</td>
-                        <td>Quiosque 14</td>
-                    </tr>
-                    <tr>
-                        <td>15h00</td>
-                        <td>Foto oficial da turma</td>
-                        <td>Faixa de areia</td>
-                    </tr>
-                    <tr>
-                        <td>17h00</td>
-                        <td>Desmontagem</td>
-                        <td>Quiosque 14</td>
-                    </tr>
-                    <tr>
-                        <td>18h00</td>
-                        <td>Embarque de volta</td>
-                        <td>Estacionamento do quiosque</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+      <section id="confirmacao">
+        <form action="/confirmacao" method="post">
+          <div class="campo">
+            <label for="nome">Nome Completo</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              required
+              minlength="3"
+              autocomplete="name"
+              placeholder="Digite seu nome"
+            />
+          </div>
 
-        <section>
-            <h2>Como chegar</h2>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              required
+              id="email"
+              autocomplete="email"
+              placeholder="Digite seu email"
+              name="email"
+            />
+          </div>
 
-            <!-- MAPA?????????? -->
-        </section>
+          <div class="campo">
+            <label for="telefone">Whatsapp</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              autocomplete="tel"
+              pattern="\(d{2}\) \d{5}-\d{4}"
+              title="Use o formato (11) 90000-0000"
+              placeholder="(11) 90000-0000"
+              aria-describedby="dica-telefone"
+            />
 
-        <section id="confirmacao">
+            <p id="dica-telefone">Informe seu número de WhatsApp com DDD.</p>
+          </div>
 
-            <form action="/confirmacao" method="post">
+          <div class="campo">
+            <label for="data-de-aniversario">Data de Aniversário</label>
+            <input
+              type="date"
+              autocomplete="bday"
+              name="data-de-aniversario"
+              id="data-de-aniversario"
+            />
+          </div>
 
-                <div class="campo">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" name="nome" id="nome" required minlength="3" autocomplete="name"
-                        placeholder="Digite seu nome">
-                </div>
+          <div class="campo">
+            <label for="nome">Nome Completo</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              required
+              minlength="3"
+              autocomplete="name"
+              placeholder="Digite seu nome"
+            />
+          </div>
 
-                <div class="campo">
-                    <label for="email">Email</label>
-                    <input type="email" required id="email" autocomplete="email" placeholder="Digite seu email"
-                        name="email">
-                </div>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              autocomplete="email"
+              placeholder="Digite seu email"
+            />
+          </div>
 
-                <div class="campo">
-                    <label for="telefone">Whatsapp</label>
-                    <input type="tel" id="telefone" name="telefone" autocomplete="tel" pattern="\(d{2}\) \d{5}-\d{4}"
-                        title="Use o formato (11) 90000-0000" placeholder="(11) 90000-0000"
-                        aria-describedby="dica-telefone">
+          <div class="campo">
+            <label for="telefone">Whatsapp</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              autocomplete="tel"
+              pattern="\(\d{2}\) \d{5}-\d{4}"
+              title="Use o formato (11) 90000-0000"
+              placeholder="(11) 90000-0000"
+              aria-describedby="dica-telefone"
+            />
 
-                    <p id="dica-telefone">
-                        Informe seu número de WhatsApp com DDD.
-                    </p>
-                </div>
+            <p id="dica-telefone">Informe seu número de WhatsApp com DDD.</p>
+          </div>
 
-                <div class="campo">
-                    <label for="data-de-aniversario">Data de Aniversário</label>
-                    <input type="date" autocomplete="bday" name="data-de-aniversario" id="data-de-aniversario">
-                </div>
+          <div class="campo">
+            <label for="data-de-aniversario">Data de Aniversário</label>
+            <input
+              type="date"
+              name="data-de-aniversario"
+              id="data-de-aniversario"
+              autocomplete="bday"
+            />
+          </div>
 
-                <div class="campo">
-                    <label for=""></label>
-                </div>
+          <fieldset class="campo">
+            <legend>Como conheceu o evento?</legend>
 
-            </form>
+            <div class="opcao">
+              <input
+                type="radio"
+                id="instagram"
+                name="origem"
+                value="instagram"
+                required
+              />
+              <label for="instagram">Instagram</label>
+            </div>
 
-        </section>
+            <div class="opcao">
+              <input
+                type="radio"
+                id="facebook"
+                name="origem"
+                value="facebook"
+              />
+              <label for="facebook">Facebook</label>
+            </div>
 
+            <div class="opcao">
+              <input
+                type="radio"
+                id="indicacao"
+                name="origem"
+                value="indicacao"
+              />
+              <label for="indicacao">Indicação</label>
+            </div>
+          </fieldset>
 
+          <div class="campo">
+            <input type="checkbox" id="termos" name="termos" required />
+            <label for="termos"> Li e aceito os termos de participação. </label>
+          </div>
+
+          <div class="campo">
+            <button type="submit">Confirmar Presença</button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <address>Comissão de formatura TI116 — nascimentomatheusg963@gmail.com</address>
+      <address>
+        Comissão de formatura TI116 — nascimentomatheusg963@gmail.com
+      </address>
     </footer>
-
-</body>
-
+  </body>
 </html>
