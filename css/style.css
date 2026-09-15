@@ -1,11 +1,9 @@
-/* =================================================_
-   RESET E VARIÁVEIS GLOBAIS
-   ================================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 :root {
     --bg-gradient: linear-gradient(135deg, #020617 0%, #090d1f 50%, #030712 100%);
@@ -20,290 +18,596 @@
     --radius: 16px;
 }
 
-/* =================================================_
-   ESTILOS GERAIS DE CORPO E FUNDO
-   ================================================= */
+
+/* =========================
+   BODY
+   ========================= */
+
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: var(--bg-gradient);
-    background-attachment: fixed;
+
     color: var(--text-main);
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     padding: 2rem 1rem;
     line-height: 1.6;
+
+    background-image: url("../img/Designer.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* =================================================_
-   EFEITO GLASSMORPHISM BASE
-   ================================================= */
-header, main section, footer {
+
+/* =========================
+   CARDS / GLASS
+   ========================= */
+
+header,
+main section,
+footer {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
     border-radius: var(--radius);
+
     padding: 2rem;
+
     width: 100%;
     max-width: 800px;
+
     margin-bottom: 1.5rem;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
-header:hover, main section:hover {
+
+header:hover,
+main section:hover {
     border-color: rgba(56, 189, 248, 0.4);
 }
 
-/* =================================================_
-   CABEÇALHO (HEADER)
-   ================================================= */
+
+/* =========================
+   HEADER
+   ========================= */
+
 header {
     text-align: center;
 }
 
+
 header h1 {
     font-size: 2.2rem;
     font-weight: 700;
+
     color: var(--text-main);
+
     margin-bottom: 0.5rem;
-    background: linear-gradient(90deg, #38bdf8, #818cf8);
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #818cf8
+    );
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 header p {
     color: var(--text-muted);
     font-size: 1.05rem;
 }
 
-/* =================================================_
-   SEÇÕES E TÍTULOS (MAIN)
-   ================================================= */
+
+/* =========================
+   MAIN
+   ========================= */
+
 main {
     width: 100%;
     max-width: 800px;
+
     display: flex;
     flex-direction: column;
+
     gap: 1.5rem;
 }
+
+
+/* =========================
+   TÍTULOS DAS SEÇÕES
+   ========================= */
 
 section h2 {
     font-size: 1.5rem;
     color: var(--primary-blue);
+
     margin-bottom: 1rem;
+
     border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+
     padding-bottom: 0.5rem;
 }
+
 
 section p {
     color: var(--text-muted);
 }
 
-/* =================================================_
-   LISTA DE DEFINIÇÕES (QUANDO E ONDE)
-   ================================================= */
+
+/* =========================
+   IFRAME / MAPA
+   ========================= */
+
+iframe {
+    display: block;
+
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+
+    margin: 1.5rem auto 0;
+
+    border: 0;
+    border-radius: 12px;
+}
+
+
+/* =========================
+   LISTA DE INFORMAÇÕES
+   ========================= */
+
 dl {
     display: grid;
+
     grid-template-columns: max-content 1fr;
+
     gap: 0.75rem 1.5rem;
+
     margin-top: 1rem;
 }
+
 
 dt {
     font-weight: 600;
     color: var(--primary-blue);
 }
 
+
 dd {
     color: var(--text-main);
 }
 
-/* =================================================_
-   TABELA (PROGRAMAÇÃO DO DIA)
-   ================================================= */
+
+/* =========================
+   TABELA
+   ========================= */
+
 .table-container {
     width: 100%;
     overflow-x: auto;
 }
 
+
 table {
     width: 100%;
+
     border-collapse: collapse;
+
     margin-top: 1rem;
+
     text-align: left;
 }
 
-th, td {
+
+th,
+td {
     padding: 0.85rem 1rem;
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+
 th {
     background-color: rgba(56, 189, 248, 0.1);
+
     color: var(--primary-blue);
+
     font-weight: 600;
 }
+
 
 tbody tr {
     transition: background-color 0.2s ease;
 }
 
+
 tbody tr:hover {
     background-color: rgba(56, 189, 248, 0.05);
 }
 
+
 td {
     color: var(--text-muted);
 }
+
 
 td:first-child {
     color: var(--text-main);
     font-weight: 500;
 }
 
-/* =================================================_
-   FORMULÁRIO DE CONFIRMAÇÃO
-   ================================================= */
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+
 form {
     display: flex;
     flex-direction: column;
+
     gap: 1.25rem;
+
     margin-top: 1rem;
 }
+
 
 .campo {
     display: flex;
     flex-direction: column;
+
     gap: 0.4rem;
 }
 
+
 label {
     font-size: 0.95rem;
+
     font-weight: 500;
+
     color: var(--text-main);
 }
+
+
+/* =========================
+   INPUTS
+   ========================= */
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="date"] {
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+
     background: rgba(2, 6, 23, 0.5);
+
     border: 1px solid rgba(56, 189, 248, 0.2);
+
     border-radius: 8px;
+
     padding: 0.75rem 1rem;
+
     color: var(--text-main);
+
     font-size: 1rem;
+
+    font-family: inherit;
+
     outline: none;
+
     transition: all 0.3s ease;
 }
 
-input:focus {
+
+/* =========================
+   FOCO NOS INPUTS
+   ========================= */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
     border-color: var(--primary-blue);
-    box-shadow: 0 0 0 3px var(--accent-glow);
+
+    box-shadow:
+        0 0 0 3px var(--accent-glow);
 }
 
-input::placeholder {
+
+/* =========================
+   PLACEHOLDER
+   ========================= */
+
+input::placeholder,
+textarea::placeholder {
     color: #475569;
 }
+
+
+/* =========================
+   SELECT
+   ========================= */
+
+select {
+    cursor: pointer;
+}
+
+
+select option {
+    background: #0f172a;
+    color: var(--text-main);
+}
+
+
+/* =========================
+   TEXTAREA
+   ========================= */
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+/* =========================
+   DICA DO TELEFONE
+   ========================= */
 
 #dica-telefone {
     font-size: 0.85rem;
     color: var(--text-muted);
 }
 
-/* Fieldset e Radio buttons */
+
+/* =========================
+   FIELDSET
+   ========================= */
+
 fieldset.campo {
     border: 1px solid rgba(56, 189, 248, 0.2);
+
     border-radius: 8px;
+
     padding: 1rem;
+
     background: rgba(2, 6, 23, 0.3);
 }
 
+
 legend {
     color: var(--primary-blue);
+
     padding: 0 0.5rem;
+
     font-weight: 600;
 }
 
+
+/* =========================
+   OPÇÕES / CHECKBOXES
+   ========================= */
+
 .opcao {
     display: flex;
+
     align-items: center;
+
     gap: 0.5rem;
+
     margin-top: 0.5rem;
 }
 
+
 .opcao input[type="radio"],
-input[type="checkbox"] {
+.opcao input[type="checkbox"],
+.campo > input[type="checkbox"] {
     accent-color: var(--primary-blue);
+
     width: 1.1rem;
     height: 1.1rem;
+
     cursor: pointer;
 }
 
-/* Termos de uso alinhado */
-.campo:has(input[type="checkbox"]) {
+
+/* =========================
+   AUTORIZAÇÃO DA IMAGEM
+   ========================= */
+
+.campo:has(> input[type="checkbox"]) {
     flex-direction: row;
+
     align-items: center;
+
     gap: 0.75rem;
 }
 
-/* Botão de Envio */
-button[type="submit"] {
-    background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
-    color: #020617;
-    font-weight: 700;
-    font-size: 1.05rem;
-    padding: 0.85rem 1.5rem;
-    border: none;
-    border-radius: 8px;
+
+.campo:has(> input[type="checkbox"]) label {
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+}
+
+
+/* =========================
+   UPLOAD DE IMAGEM
+   ========================= */
+
+input[type="file"] {
+    width: 100%;
+
+    padding: 0.7rem;
+
+    background: rgba(2, 6, 23, 0.5);
+
+    border: 1px solid rgba(56, 189, 248, 0.2);
+
+    border-radius: 8px;
+
+    color: var(--text-muted);
+
+    font-family: inherit;
+
+    cursor: pointer;
+
     transition: all 0.3s ease;
+}
+
+
+input[type="file"]:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+
+input[type="file"]::file-selector-button {
+    background: linear-gradient(
+        135deg,
+        #0284c7 0%,
+        #38bdf8 100%
+    );
+
+    color: #020617;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 0.5rem 0.8rem;
+
+    margin-right: 0.75rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   BOTÃO ENVIAR
+   ========================= */
+
+button[type="submit"] {
+    background: linear-gradient(
+        135deg,
+        #0284c7 0%,
+        #38bdf8 100%
+    );
+
+    color: #020617;
+
+    font-weight: 700;
+
+    font-size: 1.05rem;
+
+    padding: 0.85rem 1.5rem;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 14px rgba(56, 189, 248, 0.4);
+
+    transition: all 0.3s ease;
+
     margin-top: 0.5rem;
 }
 
+
 button[type="submit"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+
+    box-shadow:
+        0 6px 20px rgba(56, 189, 248, 0.6);
+
     filter: brightness(1.1);
 }
 
-/* =================================================_
-   RODAPÉ (FOOTER)
-   ================================================= */
+
+/* =========================
+   FOOTER
+   ========================= */
+
 footer {
     text-align: center;
+
     padding: 1.25rem;
+
     font-size: 0.9rem;
 }
 
+
 address {
     font-style: normal;
+
     color: var(--text-muted);
 }
 
-/* =================================================_
-   RESPONSIVIDADE (MOBILE)
-   ================================================= */
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
 @media (max-width: 600px) {
+
     body {
         padding: 1rem 0.5rem;
     }
 
-    header, main section, footer {
+
+    header,
+    main section,
+    footer {
         padding: 1.25rem;
+
         border-radius: 12px;
     }
 
+
     dl {
         grid-template-columns: 1fr;
+
         gap: 0.25rem;
     }
 
+
     dd {
         margin-bottom: 0.75rem;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+
+    iframe {
+        height: 300px;
     }
 }

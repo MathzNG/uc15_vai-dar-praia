@@ -39,6 +39,10 @@
           <dd>20h, no mesmo lugar</dd>
           <dt>Confirmação até</dt>
           <dd><time datetime="2026-11-28">28 de novembro</time></dd>
+          <dt>Onde</dt>
+          <dd>
+            Praia Grande - SP - Quiosque 14, Avenida Costa e Silva, Boqueirão
+          </dd>
         </dl>
       </section>
 
@@ -91,7 +95,15 @@
       <section>
         <h2>Como chegar</h2>
 
-        <!-- MAPA?????????? -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d29155.153669295098!2d-46.462091165167934!3d-24.017160123024574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPraia%20Grande%20-%20SP%20-%20Quiosque%2014%2C%20Avenida%20Costa%20e%20Silva%2C%20Boqueir%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1789513371721!5m2!1spt-BR!2sbr"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
       </section>
 
       <section id="confirmacao">
@@ -199,39 +211,123 @@
           </div>
 
           <fieldset class="campo">
-            <legend>Como conheceu o evento?</legend>
+            <legend>Você vai?</legend>
 
             <div class="opcao">
               <input
                 type="radio"
-                id="instagram"
+                id="com-frete"
                 name="origem"
                 value="instagram"
                 required
               />
-              <label for="instagram">Instagram</label>
+              <label for="com-frete">Com o fretado</label>
             </div>
 
             <div class="opcao">
               <input
                 type="radio"
-                id="facebook"
+                id="por-conta"
                 name="origem"
                 value="facebook"
               />
-              <label for="facebook">Facebook</label>
+              <label for="por-conta">Por conta própria</label>
             </div>
 
             <div class="opcao">
               <input
                 type="radio"
-                id="indicacao"
+                id="não-vou"
                 name="origem"
                 value="indicacao"
               />
-              <label for="indicacao">Indicação</label>
+              <label for="não-vou">Não vou conseguir ir</label>
             </div>
           </fieldset>
+
+          
+          <div class="campo">
+            <label for="acompanhantes">Acompanhantes</label>
+            <input
+              type="number"
+              id="acompanhantes"
+              name="acompanhantes"
+              min="0"
+              max="2"
+              value="0"
+            />
+          </div>
+
+          
+          <div class="campo">
+            <label for="camiseta">Tamanho da camiseta</label>
+
+            <select id="camiseta" name="camiseta">
+              <option value="">Selecione uma opção</option>
+              <option value="P">P</option>
+              <option value="M">M</option>
+              <option value="G">G</option>
+              <option value="GG">GG</option>
+              <option value="nao-quero">Não quero</option>
+            </select>
+          </div>
+
+         
+          <fieldset class="campo">
+            <legend>O que você leva</legend>
+
+            <div class="opcao">
+              <input
+                type="checkbox"
+                id="protetor"
+                name="leva"
+                value="protetor"
+              />
+              <label for="protetor">Protetor solar</label>
+            </div>
+
+            <div class="opcao">
+              <input type="checkbox" id="toalha" name="leva" value="toalha" />
+              <label for="toalha">Toalha</label>
+            </div>
+
+            <div class="opcao">
+              <input type="checkbox" id="comida" name="leva" value="comida" />
+              <label for="comida">Comida</label>
+            </div>
+
+            <div class="opcao">
+              <input type="checkbox" id="bebida" name="leva" value="bebida" />
+              <label for="bebida">Bebida</label>
+            </div>
+          </fieldset>
+
+          
+          <div class="campo">
+            <label for="observacao"> Restrição alimentar ou observação </label>
+
+            <textarea
+              id="observacao"
+              name="observacao"
+              rows="4"
+              maxlength="300"
+              placeholder="Digite alguma restrição alimentar ou observação..."
+            ></textarea>
+          </div>
+
+         
+          <div class="campo">
+            <label for="foto">Foto sua para o mural</label>
+
+            <input type="file" id="foto" name="foto" accept="image/*" />
+          </div>
+
+          
+          <div class="campo">
+            <input type="checkbox" id="autorizacao" name="autorizacao" />
+
+            <label for="autorizacao"> Autorizo o uso da minha imagem </label>
+          </div>
 
           <div class="campo">
             <input type="checkbox" id="termos" name="termos" required />
